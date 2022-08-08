@@ -4,5 +4,5 @@ FROM ubuntu
 #RUN pip install awscli
 #RUN apk --purge -v del py-pip
 RUN apt-get -y update
-RUN apt-get install -y nano
+RUN apt-get install -y nano nginx
 CMD tail -f /dev/null
