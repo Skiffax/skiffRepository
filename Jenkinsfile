@@ -3,7 +3,7 @@ properties([disableConcurrentBuilds()])
 
 pipeline {
   agent {
-    label 'master'
+    label 'skiffnode'
     }
   options {
     buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
