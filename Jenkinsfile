@@ -1,6 +1,6 @@
 #!groovy
 
-properties([disableConcurrentBuilds()]))
+properties([disableConcurrentBuilds()])
 
 pipeline {
     agent any
