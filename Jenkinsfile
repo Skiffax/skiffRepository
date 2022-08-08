@@ -10,7 +10,7 @@ pipeline {
             steps {
                 echo "------docker login------"
                 withCredentials([usernamePassword(credentialsId: 'dockerhub_skiff', usernameVariable: 'USERNAME1', passwordVariable: 'PASSWORD1')]) {
-                    docker login -u $USERNAME1 -p $PASSWORD1
+                    sh 'docker login -u $USERNAME1 -p $PASSWORD1'
                 }
             }
         }
