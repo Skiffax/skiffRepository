@@ -1,7 +1,7 @@
 node {
     //agent any
     def PROJECT_NAME = "Red Alert" // a plain string
-    def OWNER_NAME = "Skiff1"
+    def OWNER_NAME = "Skiff2"
 //    def mvnHome
     stage('1PreparationOfSkiffComp') { // for display purposes
         echo "Preparation"
