@@ -2,10 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
-            steps {
-                echo 'Hello World'
-            }
+        stage("create docker image") {
+        steps {
+            echo "start building docker image skiff"
+            sh 'docker build .'
+        }
         }
     }
 }
