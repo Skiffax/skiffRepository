@@ -5,10 +5,10 @@ pipeline {
 //   agent {
 //     label 'skiffnode'
 //     }
-  options {
-    buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
-    timestamps()
-    }
+//   options {
+//     buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
+//     timestamps()
+//     }
   stages {
     stage("create docker image") {
       steps {
