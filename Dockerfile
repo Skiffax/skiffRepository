@@ -3,5 +3,5 @@ FROM ubuntu
 #RUN apk add python
 #RUN pip install awscli
 #RUN apk --purge -v del py-pip
-RUN apt install nano
+RUN apt-get install -y nano
 CMD tail -f /dev/null
