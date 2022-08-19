@@ -28,9 +28,9 @@ sudo service nmbd restart
 
 #generate some files for "ls" command
 random_value=$RANDOM
-sudo touch $path_to_share/$random_value-$hostname$-(date +%H%M%S)-$RANDOM
-sudo touch $path_to_share/$random_value-$hostname$-(date +%H%M%S)-$RANDOM
-sudo touch $path_to_share/$random_value-$hostname$-(date +%H%M%S)-$RANDOM
-sudo touch $path_to_share/$random_value-$hostname$-(date +%H%M%S)-$RANDOM
-sudo touch $path_to_share/$random_value-$hostname$-(date +%H%M%S)-$RANDOM
-sudo touch $path_to_share/$random_value-$hostname$-(date +%H%M%S)-$RANDOM
+sudo touch $path_to_share/$random_value-$hostname-$(date +%H%M%S)-$RANDOM
+sudo touch $path_to_share/$random_value-$hostname-$(date +%H%M%S)-$RANDOM
+sudo touch $path_to_share/$random_value-$hostname-$(date +%H%M%S)-$RANDOM
+sudo touch $path_to_share/$random_value-$hostname-$(date +%H%M%S)-$RANDOM
+sudo touch $path_to_share/$random_value-$hostname-$(date +%H%M%S)-$RANDOM
+sudo touch $path_to_share/$random_value-$hostname-$(date +%H%M%S)-$RANDOM
