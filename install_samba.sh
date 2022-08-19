@@ -11,14 +11,15 @@ sudo chmod -R 0755 $path_to_share
 
 #fill the conf file
 conf_file_samba=/etc/samba/smb.conf
-sudo echo "[skiffshare]" >> $conf_file_samba
-sudo echo "comment = skiff share folder" >> $conf_file_samba
-sudo echo "path = /srv/samba/share" >> $conf_file_samba
-sudo echo "browsable = yes" >> $conf_file_samba
-sudo echo "writable = yes" >> $conf_file_samba
-sudo echo "create mask = 0644" >> $conf_file_samba
-sudo echo "directory mask = 0755" >> $conf_file_samba
-sudo echo "guest ok = yes" >> $conf_file_samba
+echo "[skiffshare]" | sudo tee -a $conf_file_samba
+echo "comment = skiff share folder" | sudo tee -a $conf_file_samba
+echo "path = /srv/samba/share" | sudo tee -a $conf_file_samba
+echo "browsable = yes" | sudo tee -a $conf_file_samba
+echo "writable = yes" | sudo tee -a $conf_file_samba
+echo "create mask = 0644" | sudo tee -a $conf_file_samba
+echo "directory mask = 0755" | sudo tee -a $conf_file_samba
+echo "guest ok = yes" | sudo tee -a $conf_file_samba
+echo "read only = yes" | sudo tee -a $conf_file_samba
 
 
 #restart services
