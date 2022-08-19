@@ -3,9 +3,9 @@
 sudo apt update
 sudo apt install -y samba samba-client
 #make the copy conf-file
-path_to_share=/srv/samba/share
 sudo cp /etc/samba/smb.conf /etc/samba/smb.conf_sample
-sudo mkdir $path_to_share
+path_to_share=/srv/samba/share
+sudo mkdir -p $path_to_share
 sudo chown nobody:nogroup $path_to_share
 sudo chmod -R 0755 $path_to_share
 
@@ -25,3 +25,12 @@ echo "read only = yes" | sudo tee -a $conf_file_samba
 #restart services
 sudo service smbd restart
 sudo service nmbd restart
+
+#generate some files for "ls" command
+random_value=$RANDOM
+sudo touch $path_to_share/$random_value-$hostname$-(date +%H%M%S)-$RANDOM
+sudo touch $path_to_share/$random_value-$hostname$-(date +%H%M%S)-$RANDOM
+sudo touch $path_to_share/$random_value-$hostname$-(date +%H%M%S)-$RANDOM
+sudo touch $path_to_share/$random_value-$hostname$-(date +%H%M%S)-$RANDOM
+sudo touch $path_to_share/$random_value-$hostname$-(date +%H%M%S)-$RANDOM
+sudo touch $path_to_share/$random_value-$hostname$-(date +%H%M%S)-$RANDOM
